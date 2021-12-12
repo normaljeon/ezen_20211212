@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+
+    <!-- 13번 예시는 12번에 비하여 신규방식인데 이를 구브라우저에서 인식되도록 하기 위하여 babel이 필요함 -->
+    <!--  CRA가 바벨과 웹펙을 기본으로 설정해준다. -->
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+  </head>
+  <body>
+    <div id="root">화면에 보이는 영역</div>
+
+    <!-- // https://babeljs.io/ 사이트의 try it out!에 아래의 script 내부문구를 넣으면 변환되는 예시를 볼 수 있음 -->
+    <script type="text/babel">
+      const title = "신상명세서";
+      const name = "홍길동";
+      const age = 20;
+      const addr = "서울";
+      const el = (
+        <div>
+          <h2> {title} </h2>
+          <ul>
+            <li>이름 : {name} </li>
+            <li>나이 : {age} </li>
+            <li>주소 : {addr} </li>
+          </ul>
+        </div>
+      );
+      const dom = document.querySelector("#root");
+      ReactDOM.render(el, dom);
+    </script>
+  </body>
+</html>

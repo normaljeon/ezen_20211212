@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const arr = ["고양이", "강아지", "기린"];
+      const arr1 = arr.concat();
+      const arr2 = arr.concat("호랑이", "생쥐");
+      console.log(arr1);
+      console.log(arr2);
+
+      const arr3 = [...arr];
+      const arr4 = [...arr, "물고기", "잉어", "인어"];
+      console.log(arr3);
+      console.log(arr4);
+
+      // 객체 - 갱신
+      const dog = { name: "치와와", age: 5 };
+      const dog1 = { ...dog, name: "푸들", age: 4 };
+      console.log(dog1);
+
+      const data = [
+        { id: 1, name: "강호동1", age: 20 },
+        { id: 2, name: "강호동2", age: 25 },
+        { id: 3, name: "강호동3", age: 30 },
+        { id: 4, name: "강호동4", age: 35 },
+        { id: 5, name: "강호동5", age: 40 },
+      ];
+
+      const data1 = data.concat();
+      const data2 = data.concat({ id: 6, name: "전지현", age: 27 });
+      const data3 = [...data];
+      const data4 = [...data, { id: 7, name: "김영희", age: 29 }];
+
+      console.log("///////////");
+      console.log(data1);
+      console.log(data2);
+      console.log(data3);
+      console.log(data4);
+
+      // 갱신 (1)
+      const data5 = data.map((item, index) => {
+        if (item.id === 3) {
+          // 갱신 (노가다지만 직관적임)
+          return {
+            ...item,
+            name: "고민지",
+          };
+        } else {
+          return item;
+        }
+      });
+      console.log(data5);
+
+      // 갱신 (2) (가독성이 좋음)
+      const data6 = data.map((item, index) =>
+        item.id === 1 ? { ...item, name: "송송이" } : item
+      );
+      console.log(data6);
+    </script>
+  </body>
+</html>

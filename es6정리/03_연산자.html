@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const isLogin = undefined;
+      const done1 = true;
+      const done2 = false;
+
+      // JSX영역 : (1) 삼항연산자, (2) &&연산자, (3) ||연산자 => 반환값에 대한 설명이 아닌 리액트식 표현방식을 설명
+      const result1 = done1 === done2;
+      console.log(result1);
+
+      const result2 = done1 && "조건이 참일 경우 참의 값";
+      console.log(result2);
+
+      // const result3 = done2 === false || "거짓일 경우 결과";
+      const result3 = done2 || "거짓일 경우 결과";
+      console.log(result3);
+
+      // 다중 if문 (리액트에서는 다중 if문을 사용할 수 없음)
+      /*
+        ( 조건1 ) && 결과1
+        ( 조건2 ) && 결과1
+        ( 조건3 ) && 결과1
+      */
+    </script>
+  </body>
+</html>
