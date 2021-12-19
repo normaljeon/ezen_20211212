@@ -15,7 +15,8 @@
 
       // 원보유지, 사본만들어서 작업 : 불변성
       const arr1 = [10, 20, 30, 40, 50];
-      const con1 = arr.concat(); // concat의 매개변수가 없으면, 복사본이다.
+
+      const con1 = arr.concat(); // concat의 매개변수가 없으면, 복사본이다. 또는 const con1 = [...arr]
       const con2 = arr.concat(60, 70, 80);
       console.log(arr1);
       console.log(con1);
